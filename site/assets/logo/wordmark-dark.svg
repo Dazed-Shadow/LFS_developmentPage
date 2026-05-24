@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" width="240" height="120">
+  <rect width="240" height="120" fill="#2B1F1A" rx="12"></rect>
+  <text x="20" y="62" font-family="Fraunces, Georgia, &#39;Times New Roman&#39;, serif" font-weight="700" font-size="50" letter-spacing="-0.01em" fill="#F4ECD8">LO</text>
+  <text x="98" y="62" font-family="Fraunces, Georgia, &#39;Times New Roman&#39;, serif" font-weight="500" font-style="italic" font-size="50" letter-spacing="-0.01em" fill="#E8A857">FI</text>
+  <text x="20" y="92" font-family="Fraunces, Georgia, &#39;Times New Roman&#39;, serif" font-weight="500" font-size="18" letter-spacing="-0.01em" fill="#F4ECD8">SANCTUARY</text>
+  <text x="22" y="110" font-family="Inter, system-ui, sans-serif" font-size="9" letter-spacing="2.9" fill="#A8B89A">COZY GAMER SANCTUARY</text>
+</svg>

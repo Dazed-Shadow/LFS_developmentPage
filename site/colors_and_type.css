@@ -1,0 +1,205 @@
+/* ─────────────────────────────────────────────────────────────────
+   Lofi Sanctuary — Cozy Gamer Sanctuary Design System
+   Color + Type foundations
+
+   Source of truth for these tokens:
+   - GitHub: Dazed-Shadow/LOFI_SANCTUARY → docs/design-system.md
+   - GitHub: Dazed-Shadow/LOFI_SANCTUARY → epk/styles.css
+   - The artist's Lovable site (https://jahna.lovable.app/)
+
+   Voice rule: warm and organic only. Avoid pure black, pure white,
+   pure saturated primaries, neon, RGB. Everything reads "lived-in".
+
+   🔒 D-001 · Typeface families locked 2026-05-22
+      Display: Fraunces · Body: Inter · Mono: JetBrains Mono
+      See DECISIONS.md before changing.
+   ───────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ───── Brand palette (canonical) ─────────────────────────────── */
+  --sage-fog:     #A8B89A;  /* houseplant leaves, distant hills */
+  --cream-paper:  #F4ECD8;  /* page backgrounds, mug ceramic */
+  --earth-cocoa:  #6B4F3F;  /* wood desks, picture frames */
+  --pastel-rose:  #E8B4B8;  /* sky at dusk, blush accents */
+  --amber-lamp:   #E8A857;  /* warm light sources, lamp glow */
+  --rain-slate:   #5C6B73;  /* window glass, rainy sky */
+  --cocoa-night:  #2B1F1A;  /* nighttime backgrounds */
+
+  /* ───── Extended palette (derived) ────────────────────────────── */
+  --paper-soft:   #FAF4E4;  /* warmer than cream-paper, for cards */
+  --paper-deep:   #EBE0C5;  /* one step deeper than cream-paper */
+  --ink-soft:     #4A3B33;  /* secondary text on paper */
+  --accent-soft:  #F2C98B;  /* amber faded; underlines, hovers */
+  --sage-deep:    #7C8E72;  /* sage at higher saturation */
+  --rose-deep:    #C98A8E;  /* rose at higher saturation */
+
+  /* ───── Semantic — surface ────────────────────────────────────── */
+  --surface:        var(--cream-paper);
+  --surface-soft:   var(--paper-soft);
+  --surface-deep:   var(--paper-deep);
+  --surface-invert: var(--cocoa-night);
+  --surface-card:   #FFFDF5;          /* a touch above paper for cards */
+
+  /* ───── Semantic — foreground ─────────────────────────────────── */
+  --fg-1:           var(--cocoa-night); /* primary ink */
+  --fg-2:           var(--ink-soft);    /* body, secondary */
+  --fg-3:           var(--rain-slate);  /* tertiary, captions */
+  --fg-quiet:       var(--sage-fog);    /* meta, very quiet */
+  --fg-on-dark:     var(--cream-paper); /* text on cocoa-night */
+
+  /* ───── Semantic — accent / status ────────────────────────────── */
+  --accent:         var(--amber-lamp);
+  --accent-quiet:   rgba(232, 168, 87, 0.12);
+  --accent-line:    var(--accent-soft);
+
+  --positive:       var(--sage-deep);   /* "available", "shipped" */
+  --warn:           var(--amber-lamp);  /* "pending", "in review" */
+  --info:           var(--rain-slate);  /* neutral notes */
+
+  /* ───── Borders & hairlines (always tinted, never pure black) ── */
+  --border-hair:    rgba(107, 79, 63, 0.12);   /* earth-cocoa @ 12% */
+  --border-soft:    rgba(107, 79, 63, 0.20);
+  --border-strong:  rgba(43, 31, 26, 0.35);
+
+  /* ───── Shadows (warm, never neutral grey) ────────────────────── */
+  --shadow-near:    0 1px 0 rgba(107, 79, 63, 0.08);
+  --shadow-rest:    0 6px 18px rgba(43, 31, 26, 0.06);
+  --shadow-lift:    0 14px 38px rgba(43, 31, 26, 0.12);
+  --shadow-lamp:    0 0 60px rgba(232, 168, 87, 0.22);   /* warm glow */
+
+  /* ───── Radii — soft, never sharp ─────────────────────────────── */
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   14px;
+  --r-xl:   20px;
+  --r-pill: 999px;
+
+  /* ───── Spacing — base 4 ──────────────────────────────────────── */
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:   12px;
+  --sp-4:   16px;
+  --sp-5:   24px;
+  --sp-6:   32px;
+  --sp-7:   48px;
+  --sp-8:   64px;
+  --sp-9:   96px;
+  --sp-10: 120px;
+
+  /* ───── Type families ─────────────────────────────────────────── */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', 'Consolas', 'Menlo', monospace;
+
+  /* ───── Type scale (semantic) ─────────────────────────────────── */
+  --fs-h1:   clamp(2.4rem, 5vw, 4.2rem);   /* hero / artist name */
+  --fs-h2:   clamp(1.6rem, 3vw, 2.4rem);   /* section heads */
+  --fs-h3:   1.2rem;                        /* card titles */
+  --fs-lead: 1.15rem;                       /* intros */
+  --fs-body: 1.0625rem;                     /* 17px base */
+  --fs-sm:   0.95rem;
+  --fs-xs:   0.85rem;
+  --fs-kicker: 0.85rem;                     /* uppercase labels */
+
+  /* ───── Motion ────────────────────────────────────────────────── */
+  --ease-soft:   cubic-bezier(.22, .61, .36, 1);  /* default — gentle out */
+  --ease-cozy:   cubic-bezier(.45, .05, .55, .95);
+  --dur-quick:   120ms;
+  --dur-base:    180ms;
+  --dur-slow:    320ms;
+}
+
+/* ───── Base elements ───────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  color: var(--fg-1);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--fg-1);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.6em;
+  font-weight: 500;
+  text-wrap: balance;
+}
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: 600; }
+h4 { font-size: 1rem;       font-weight: 600; letter-spacing: 0.02em; }
+
+p {
+  margin: 0 0 1em;
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--fg-1);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-line);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--dur-base) var(--ease-soft);
+}
+a:hover { text-decoration-color: var(--accent); }
+
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  font-variant-ligatures: none;       /* keep ==, =>, -> readable in BPM/credit strings */
+}
+code {
+  background: var(--paper-soft);
+  padding: 0.1em 0.4em;
+  border-radius: var(--r-xs);
+  border: 1px solid var(--border-hair);
+}
+
+/* ───── Utility — kicker labels (uppercase, tracked) ────────────── */
+.kicker {
+  font-family: var(--font-body);
+  font-size: var(--fs-kicker);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--rain-slate);
+  font-weight: 500;
+}
+
+/* ───── Utility — artist-quote (signature element) ──────────────── */
+.artist-quote {
+  margin: 0 0 1.4em;
+  padding: 18px 22px 16px;
+  border-left: 3px solid var(--amber-lamp);
+  background: var(--accent-quiet);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.18rem;
+  line-height: 1.5;
+  color: var(--earth-cocoa);
+}
+
+/* ───── Selection — warm amber, not OS blue ─────────────────────── */
+::selection {
+  background: var(--accent-soft);
+  color: var(--cocoa-night);
+}
+
+/* ───── Focus — visible but warm, never bright blue ─────────────── */
+:focus-visible {
+  outline: 2px solid var(--amber-lamp);
+  outline-offset: 2px;
+  border-radius: var(--r-xs);
+}

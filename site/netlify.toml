@@ -1,0 +1,32 @@
+# Netlify configuration for Lofi Sanctuary EPK
+# This is a pure-static site: no build step, just publish the folder as-is.
+
+[build]
+  # Nothing to build; the site is already static. Netlify needs SOMETHING here,
+  # so we no-op. If you ever pre-compile JSX, replace with the real command.
+  command = "echo 'No build step — static site.'"
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# JSX components change often during design iteration — short cache so
+# edits propagate fast. Bump to a longer TTL once the design is settled.
+[[headers]]
+  for = "/components/*"
+  [headers.values]
+    Cache-Control = "public, max-age=60, must-revalidate"

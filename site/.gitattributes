@@ -1,0 +1,5 @@
+# Treat all design source files as text for cleaner diffs
+*.html text
+*.css text
+*.jsx text
+*.svg text

@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-05-24T18:58:06.367Z",
+  "generated_by": "scripts/port-to-site.mjs",
+  "note": "This file is rewritten on every port. Do not hand-edit. Run `npm run port` from the project root.",
+  "source_dir": "ui_kits/epk",
+  "files": [
+    "assets/covers/sanctuary-2d-pixel.png",
+    "assets/covers/sanctuary-3d-lowpoly.png",
+    "assets/covers/sanctuary-hero.png",
+    "assets/covers/sanctuary-real.png",
+    "assets/logo/wordmark-dark.svg",
+    "assets/logo/wordmark.svg",
+    "colors_and_type.css",
+    "components/About.jsx",
+    "components/Contact.jsx",
+    "components/Footer.jsx",
+    "components/Gallery.jsx",
+    "components/Hero.jsx",
+    "components/Licensing.jsx",
+    "components/Nav.jsx",
+    "components/StreamerPack.jsx",
+    "components/Tracks.jsx",
+    "components/primitives.jsx",
+    "index.html",
+    "styles.css"
+  ]
+}
